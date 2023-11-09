@@ -1,0 +1,49 @@
+{
+  "name": "ts-market-maker",
+  "version": "0.0.1",
+  "description": "Market making on Solana with Phoenix",
+  "main": "./src/index.ts",
+  "repository": "git@github.com:R-K-H/ts-market-maker.git",
+  "author": "Kollan House <kollanh@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsup",
+    "start": "ts-node -T src/index.ts",
+    "mainnet-w": "ts-node -T src/withdraw.ts"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "0.28.1-beta.2",
+    "@ellipsis-labs/phoenix-sdk": "^2.0.1",
+    "@metaplex-foundation/beet": "^0.7.1",
+    "@metaplex-foundation/rustbin": "^0.3.1",
+    "@metaplex-foundation/solita": "^0.20.0",
+    "@openbook-dex/openbook-v2": "^0.0.6",
+    "@solana/spl-token": "^0.3.7",
+    "@solana/web3.js": "^1.78.0",
+    "@stdlib/utils-circular-buffer": "^0.0.7",
+    "@types/node": "^20.4.1",
+    "@types/node-fetch": "^2.6.4",
+    "@types/websocket": "^1.0.5",
+    "binance": "^2.8.6",
+    "bn.js": "^5.2.1",
+    "borsh": "^0.7.0",
+    "bs58": "^5.0.0",
+    "dotenv": "^16.3.1",
+    "limited-cache": "^2.1.1",
+    "tslog": "^4.8.2"
+  },
+  "devDependencies": {
+    "@types/bn.js": "^5.1.1",
+    "@types/chai": "^4.3.4",
+    "@types/mocha": "^10.0.1",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "chai": "^4.3.7",
+    "eslint": "^8.44.0",
+    "mocha": "^10.2.0",
+    "rpc-websockets": "^7.5.1",
+    "ts-node": "^10.9.1",
+    "tsup": "^7.1.0",
+    "typescript": "^5.1.6"
+  }
+}
