@@ -9,7 +9,12 @@
   "scripts": {
     "build": "tsup",
     "start": "ts-node -T src/index.ts",
-    "mainnet-w": "ts-node -T src/withdraw.ts"
+    "mainnet-w": "ts-node -T src/withdraw.ts",
+    "prepare": "husky install",
+    "typecheck": "tsc --project tsconfig.json --noEmit"
+  },
+  "lint-staged": {
+    "*.ts": "prettier -w \"**/*\" --ignore-unknown --cache"
   },
   "dependencies": {
     "@coral-xyz/anchor": "0.28.1-beta.2",
@@ -21,14 +26,10 @@
     "@solana/spl-token": "^0.3.7",
     "@solana/web3.js": "^1.78.0",
     "@stdlib/utils-circular-buffer": "^0.0.7",
-    "@types/node": "^20.4.1",
-    "@types/node-fetch": "^2.6.4",
-    "@types/websocket": "^1.0.5",
     "binance": "^2.8.6",
     "bn.js": "^5.2.1",
     "borsh": "^0.7.0",
     "bs58": "^5.0.0",
-    "dotenv": "^16.3.1",
     "limited-cache": "^2.1.1",
     "tslog": "^4.8.2"
   },
@@ -36,11 +37,18 @@
     "@types/bn.js": "^5.1.1",
     "@types/chai": "^4.3.4",
     "@types/mocha": "^10.0.1",
+    "@types/node": "^20.9.0",
+    "@types/node-fetch": "^2.6.9",
+    "@types/websocket": "^1.0.9",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "chai": "^4.3.7",
+    "dotenv": "^16.3.1",
     "eslint": "^8.44.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.0.2",
     "mocha": "^10.2.0",
+    "prettier": "^3.0.3",
     "rpc-websockets": "^7.5.1",
     "ts-node": "^10.9.1",
     "tsup": "^7.1.0",
