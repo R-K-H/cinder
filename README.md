@@ -1,6 +1,6 @@
 # Cinder
 
-![Cindering Landscape](./assets/cinder.jpeg?raw=true)
+![Cindering Landscape](https://github.com/R-K-H/cinder/blob/master/assets/cinder.jpg?raw=true)
 
 ## License
 
